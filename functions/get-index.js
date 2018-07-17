@@ -60,6 +60,8 @@ module.exports.handler = co.wrap(function* (event, context, callback) {
   };
   let html = Mustache.render(template,view);
 
+  console.log('Another push to code build');
+  
   const response = {
     statusCode: 200,
     body: html,

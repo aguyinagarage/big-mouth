@@ -59,8 +59,6 @@ module.exports.handler = co.wrap(function* (event, context, callback) {
     searchUrl: `${restaurantsApiRoot}/search`
   };
   let html = Mustache.render(template,view);
-  
-  console.log('This is a test');
 
   const response = {
     statusCode: 200,

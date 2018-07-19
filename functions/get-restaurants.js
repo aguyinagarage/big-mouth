@@ -19,6 +19,7 @@ function* getRestaurants(count) {
 
 module.exports.handler = co.wrap(function* (event, context, cb) {
   let restaurants = yield getRestaurants(defaultResults);
+  console.log('this is my monkey');
   let response = {
     statusCode: 200,
     body: JSON.stringify(restaurants)
